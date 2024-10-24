@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}TypeBillet{% endblock %}
+
+{% block body %}
+    <h1>TypeBillet</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ type_billet.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ type_billet.nom }}</td>
+            </tr>
+            <tr>
+                <th>Services_inclus</th>
+                <td>{{ type_billet.servicesInclus }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_type_billet_index') }}">back to list</a>
+
+    <a href="{{ path('app_type_billet_edit', {'id': type_billet.id}) }}">edit</a>
+
+    {{ include('type_billet/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New TypeBillet{% endblock %}
+
+{% block body %}
+    <h1>Create new TypeBillet</h1>
+
+    {{ include('type_billet/_form.html.twig') }}
+
+    <a href="{{ path('app_type_billet_index') }}">back to list</a>
+{% endblock %}
